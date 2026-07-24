@@ -29,6 +29,11 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok', message: 'Backend is running' });
 });
 
+// Root Route
+app.get('/', (req, res) => {
+  res.status(200).send('Portfolio Backend is running successfully!');
+});
+
 // Error Handler Middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
